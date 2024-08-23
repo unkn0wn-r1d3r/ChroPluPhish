@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Phishlet Extractor",
+    "version": "1.0",
+    "description": "Extracts parameters, tokens, and other data from web pages.",
+    "permissions": [
+      "activeTab",
+      "webRequest",
+      "webRequestBlocking",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    }
+  }
+  
