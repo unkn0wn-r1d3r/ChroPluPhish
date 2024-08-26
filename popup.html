@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ChropluPhish</title>
+  <title>Extracted Data</title>
   <style>
-    body { width: 400px; }
-    #results { white-space: pre-wrap; }
+    body { width: 400px; padding: 10px; font-family: Arial, sans-serif; }
+    .panel { border: 1px solid #ccc; margin-bottom: 10px; padding: 10px; }
+    h2 { margin-top: 0; }
+    pre { white-space: pre-wrap; word-wrap: break-word; }
+    .highlight { background-color: yellow; }
+    button { margin-top: 10px; margin-right: 5px; }
   </style>
 </head>
 <body>
-  <h1>Extracted Data</h1>
-  <pre id="results">Loading...</pre>
+  <div class="panel">
+    <h2>Login Form Information</h2>
+    <pre id="formData">Loading...</pre>
+  </div>
+  
+  <div class="panel">
+    <h2>CSRF Tokens</h2>
+    <pre id="csrfTokens">Loading...</pre>
+  </div>
+  
+  <div class="panel">
+    <h2>Access Tokens</h2>
+    <pre id="accessTokens">Loading...</pre>
+  </div>
+  
+  <div class="panel">
+    <h2>Cookies</h2>
+    <pre id="cookies">Loading...</pre>
+    <button id="exportCookieNames">Export Cookie Names</button>
+    <button id="exportFullCookies">Export Full Cookies</button>
+  </div>
+  
+  <button id="copyAllButton">Copy All Data</button>
+  
   <script src="popup.js"></script>
 </body>
 </html>
